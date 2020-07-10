@@ -4,12 +4,14 @@ import { Link } from "gatsby"
 const Header = () => {
 
   return (
-    <div>
-      <logo><Link to={'/'}>LOGO</Link></logo>
-      <nav>
-        <Link to={'/contact'}>Контакты</Link>
-      </nav>
-    </div>
+    <header>
+      <div className="container">
+        <logo><Link to={'/'}>LOGO</Link></logo>
+        <nav>
+          <Link to={'/contact'}>Контакты</Link>
+        </nav>
+      </div>
+    </header>
   )
 }
 

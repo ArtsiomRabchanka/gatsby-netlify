@@ -1,1 +1,23 @@
 @import "bootstrap/bootstrap.scss";
+@import "styles/variables.scss";
+
+a {
+  color: white;
+  text-decoration: none;
+  box-shadow: none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    box-shadow: none;
+  }
+}
+
+header {
+  background-color: $header-color;
+  margin-bottom: 30px;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+}
