@@ -40,6 +40,7 @@ const Bio = () => {
     <div>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
+        className="rounded-circle"
         alt={author.name}
       />
       <p>
