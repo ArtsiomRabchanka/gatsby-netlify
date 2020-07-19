@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from "gatsby-image"
 import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -18,14 +19,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article>
-        <header>
+        <div>
           <h1>
             {post.frontmatter.title}
           </h1>
           <p>
             {post.frontmatter.date}
           </p>
-        </header>
+          <div><Image
+            fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
+            className='container'
+            alt={post.title}
+          /></div>
+        </div>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr/>
         <footer>
@@ -72,6 +78,18 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        thumbnail {
+          childImageSharp {
+            fluid(quality: 100) {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+                originalImg
+                originalName
+              }
+          }
+        }
       }
     }
   }

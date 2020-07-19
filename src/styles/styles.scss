@@ -2,14 +2,23 @@
 @import "styles/variables.scss";
 
 a {
-  color: white;
   text-decoration: none;
   box-shadow: none;
   &:hover {
-    color: white;
     text-decoration: none;
     box-shadow: none;
   }
+}
+
+header a {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.gatsby-image-wrapper {
+  height: 500px;
 }
 
 header {
