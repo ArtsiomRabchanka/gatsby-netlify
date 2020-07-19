@@ -1,6 +1,6 @@
 ---
 title: Hello World
-thumbnail: 20200620_153939.jpg
+thumbnail: img_9420.jpg
 date: 2015-05-01T22:12:03.284Z
 description: Hello World
 ---
